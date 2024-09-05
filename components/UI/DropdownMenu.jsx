@@ -52,7 +52,7 @@ const DropdownMenu = ({ containerClassName, itemClassName }) => {
   const scope = useMenuAnimation(isOpen);
 
   const items = [
-    { name: "Stars on GitHub", link: "https://github.com/JhojanGgarcia" },
+    { name: "Stars on GitHub", link: "https://github.com/JhojanGgarcia/motion-bees" },
     { name: "Visit me", link: "https://x.com/MrcGgarcia" },
   ];
 
