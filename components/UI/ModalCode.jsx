@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const ModalCode = ({ SourceCode, onClose }) => {
+  const [copied, setCopied] = React.useState(false);
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -19,10 +20,9 @@ const ModalCode = ({ SourceCode, onClose }) => {
   const handleCopyCode = async () => {
     try {
       await navigator.clipboard.writeText(SourceCode);
-      alert("Código copiado al portapapeles");
-    } catch (err) {
-      alert("Error al copiar el código");
-    }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1000);
+    } catch (err) {}
   };
 
   return (
@@ -54,7 +54,7 @@ const ModalCode = ({ SourceCode, onClose }) => {
             onClick={handleCopyCode}
             className="px-4 py-2 border border-white/5 text-white rounded-2xl"
           >
-            Copy
+            {copied ? "Copied" : "Copy"}
           </button>
           <button
             onClick={onClose}
