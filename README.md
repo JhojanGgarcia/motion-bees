@@ -1,6 +1,6 @@
 <img src="./public/motion-bees.png" alt="Motion Bees" />
 
-**Motion-Primitives**
+**Motion-bees**
 Stylized and easily integrated, these motion components are designed for engineers and designers, using Framer Motion and Tailwind CSS.
 
 This project is currently in beta. New components will be released on a regular basis and significant updates will be made to the code.
